@@ -26,7 +26,8 @@ def get_price(coin):
 
 old_data = load_data("last_price.json")
 
-coins = ["bitcoin", "ethereum", "solana"]
+text = input("Введите монеты через запятую: ")
+coins = [coin.strip() for coin in text.split(",") if coin.strip()]
 
 growing = 0
 falling = 0
